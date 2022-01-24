@@ -1,18 +1,18 @@
 #!/bin/sh
 if [ "$#" != "2" ]; then
 	echo "Invalid params"
+	exit
 fi
+
 
 N=$1
 M=$2
 
-RES=""
-
 I=0
 while [ $I -lt $M ]; do
-	RES="$RES $(($N + $I))"
+	echo -n "$(($N + $I)) "
 	I=$((I + 1))
 done
 
-echo "$RES"
+echo
 
