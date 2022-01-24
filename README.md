@@ -1,2 +1,2 @@
-# avst-shell
-My shell-scripts for A. V. Stolyarov taskbook
+# avst-tasks
+My codes for A. V. Stolyarov taskbook
