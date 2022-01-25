@@ -4,8 +4,8 @@ if [ "$#" != "1" ]; then
 	exit
 fi
 
-STATUS=$(mkdir "$1")
-if [ "$STATUS" != "0" ]; then
+STATUS=$(mkdir "$1" > /dev/null 2>/dev/null)
+if [ "$?" != "0" ]; then
 	echo "Failed to make directory"
 	exit
 fi
