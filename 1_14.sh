@@ -10,3 +10,13 @@ if [ "$?" != "0" ]; then
 	exit
 fi
 
+
+PATH_START="$1/file"
+
+
+I=1
+for FILE in $(find ./ -type f); do
+	ln -T "$FILE" "$PATH_START$I"
+	I=$((I + 1))
+done
+
